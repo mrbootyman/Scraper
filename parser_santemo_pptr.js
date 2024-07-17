@@ -18,7 +18,7 @@ const puppeteer = require('puppeteer');
       
 
     let arr = await page.evaluate(() => {
-        let text = Array.from(document.querySelectorAll('#sale-list-item-title>a'), el => el.innerText);
+        let text = Array.from(document.querySelectorAll('sale-list-item-title>a'), el => el.innerText);
         return text;
     })
     console.log(arr);
